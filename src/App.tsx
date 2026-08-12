@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import logoImg from './assets/image/logo1.png'; // <-- Import logo dari folder assets
 import {
   Biodata,
   DiagnosticData,
@@ -482,7 +483,7 @@ export default function App() {
         closeCPBankModal={() => setShowCPBankModal(false)}
         showUploadExcelModal={showUploadExcelModal}
         closeUploadExcelModal={() => setShowUploadExcelModal(false)}
-showLightboxModal={showLightboxModal}
+        showLightboxModal={showLightboxModal}
         lightboxImgSrc={lightboxImgSrc}
         closeLightboxModal={() => setShowLightboxModal(false)}
         showToast={showToast}
@@ -492,6 +493,9 @@ showLightboxModal={showLightboxModal}
 
       {/* FOOTER */}
       <footer className="bg-indigo-950 text-white border-t border-indigo-900 py-6 text-center text-xs font-medium no-print">
+        <div className="flex items-center justify-center space-x-2 mb-2">
+          <img src={logoImg} alt="BAKUMPUL Logo" className="h-6 w-auto" />
+        </div>
         <p>&copy; 2026 BAKUMPUL. Portal Kurikulum Merdeka Terintegrasi.</p>
         <p className="text-indigo-400 mt-1">Dibuat dengan dedikasi untuk mendukung administrasi mengajar yang lebih cepat dan efisien. Creative by @Rafii Hamdi, M.Pd.</p>
       </footer>
